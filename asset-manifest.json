@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/GCompet/static/css/main.4ea0c47a.css",
+    "main.css": "/GCompet/static/css/main.dcd7eb1a.css",
     "main.js": "/GCompet/static/js/main.0be9d1e9.js",
     "static/media/JosefinSans-Medium.ttf": "/GCompet/static/media/JosefinSans-Medium.45a5738c27c1bbbecc0c.ttf",
     "index.html": "/GCompet/index.html",
-    "main.4ea0c47a.css.map": "/GCompet/static/css/main.4ea0c47a.css.map",
+    "main.dcd7eb1a.css.map": "/GCompet/static/css/main.dcd7eb1a.css.map",
     "main.0be9d1e9.js.map": "/GCompet/static/js/main.0be9d1e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ea0c47a.css",
+    "static/css/main.dcd7eb1a.css",
     "static/js/main.0be9d1e9.js"
   ]
 }
