@@ -3,48 +3,20 @@ import axios from 'axios';
 import Ligne from './Ligne';
 import Info from './Info';
 
-const GoPerso = ({ url, sss, slope, par }) => {
-    const [data, setData] = useState([]);
+const Go = ({ url, sss, slope, par, event }) => {
+    const [data, setData] = useState([{patienter: "patienter"}]);
+    const URL = "https://gcompetapi.osc-fr1.scalingo.io/perso/";
+    // const URL = "http://localhost:5000/perso/";
 
     useEffect(() => {
-        axios.get("https://gcompetapi.osc-fr1.scalingo.io/perso/" + url + "/" + sss + "/" + slope + "/" + par).then(function (reponce) {
+        axios.get(URL + url + "/" + sss + "/" + slope + "/" + par).then(function (reponce) {
             setData(reponce.data)
         })
             .catch(function (error) {
                 setData(null)
             })
-
-
-    }, [url, sss, slope, par])
-
-    if (url === "") {
+    },[event])
         return (
-            <div>
-                <br />
-                <br />
-                <h2>Veuillez saisir la partie qui se trouve APRES https://pages.ffgolf.org/histoindex/fiche/</h2>
-                <h2>lorque vous allez dans votre espace, INDEX/VOIR MON HISTORIQUE D'INDEX</h2>
-                <h2>Cela doit ressembler à: XDFQZgQwVGMHZg9sVzA%3D</h2>
-            </div>
-        );
-    }
-    else if (data === null) {
-        return (
-            <div>
-                <br />
-                <br />
-                <h1>Url incorrecte</h1>
-                <h2>Veuillez saisir la partie qui se trouve APRES https://pages.ffgolf.org/histoindex/fiche/</h2>
-                <h2>lorque vous allez dans votre espace, INDEX/VOIR MON HISTORIQUE D'INDEX</h2>
-                <h2>Cela doit ressembler à: XDFQZgQwVGMHZg9sVzA%3D</h2>
-            </div>
-        );
-    }
-
-    else {
-        return (
-
-
             <div className='perso'>
 
                 <div>
@@ -72,6 +44,5 @@ const GoPerso = ({ url, sss, slope, par }) => {
             </div>
         );
     };
-}
 
-export default GoPerso;
+export default Go;

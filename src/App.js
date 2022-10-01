@@ -1,15 +1,14 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import NeuvicUrl from "./pages/LienNeuvic";
-import LienPerso from "./pages/LienPerso";
+import GoPage from "./pages/GoPage";
+import PremierePage from "./pages/PremierePage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/neuvic" element={<NeuvicUrl/>} />
-        <Route path="/perso" element={<LienPerso/>} />
-        <Route path="*" element={<LienPerso/>} />
+        <Route path="/url/:urldonnee" element={<GoPage/>} />
+        <Route path="*" element={<PremierePage/>} />
       </Routes>
     </BrowserRouter>
   );
